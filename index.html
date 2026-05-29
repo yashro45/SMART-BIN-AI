@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8"/>
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1.0"/>
+
+  <title>SmartBin AI</title>
+
+  <!-- Leaflet CSS -->
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet/dist/leaflet.css"
+  />
+
+  <!-- Font Awesome -->
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css"/>
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+
+  <nav class="navbar">
+
+    <div class="logo">
+      <i class="fa-solid fa-trash"></i>
+      SmartBin AI
+    </div>
+
+    <div class="nav-right">
+      Smart Waste Monitoring System
+    </div>
+
+  </nav>
+
+  <!-- Hero -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>
+        AI Powered Garbage Monitoring Dashboard
+      </h1>
+
+      <p>
+        Monitor overflowing garbage bins
+        using crowdsourced smart reporting.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- Stats -->
+
+  <section class="stats">
+
+    <div class="card">
+      <h2 id="totalBins">0</h2>
+      <p>Total Reports</p>
+    </div>
+
+    <div class="card">
+      <h2 id="overflowingBins">0</h2>
+      <p>Overflowing Bins</p>
+    </div>
+
+    <div class="card">
+      <h2 id="cleanedBins">0</h2>
+      <p>Cleaned Bins</p>
+    </div>
+
+  </section>
+
+  <!-- Main Grid -->
+
+  <section class="main-grid">
+
+    <!-- Form -->
+
+    <div class="form-section">
+
+      <h2>Report Garbage Bin</h2>
+
+      <form id="binForm">
+
+        <input
+        type="text"
+        id="title"
+        placeholder="Area / Bin Name"
+        required
+        />
+
+        <select id="type">
+
+          <option value="Overflowing Bin">
+            Overflowing Bin
+          </option>
+
+          <option value="Garbage Dump">
+            Garbage Dump
+          </option>
+
+          <option value="Unclean Area">
+            Unclean Area
+          </option>
+
+        </select>
+
+        <textarea
+        id="description"
+        rows="5"
+        placeholder="Describe the issue"
+        required
+        ></textarea>
+
+        <input
+        type="text"
+        id="location"
+        placeholder="Enter Area Name"
+        required
+        />
+
+        <input
+        type="file"
+        id="image"
+        accept="image/*"
+        />
+
+        <img
+        id="preview"
+        src=""
+        alt=""
+        />
+
+        <button type="submit">
+          Submit Report
+        </button>
+
+      </form>
+
+    </div>
+
+    <!-- Map -->
+
+    <div class="map-section">
+
+      <div class="map-header">
+
+        <h2>Live Garbage Map</h2>
+
+      </div>
+
+      <div id="map"></div>
+
+    </div>
+
+  </section>
+
+  <!-- Reports -->
+
+  <section class="reports-section">
+
+    <h2>Reported Garbage Issues</h2>
+
+    <div id="reportsContainer"></div>
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer>
+    SmartBin AI © 2026
+  </footer>
+
+  <!-- Leaflet -->
+  <script
+  src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>
