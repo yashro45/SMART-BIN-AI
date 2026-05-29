@@ -1,0 +1,217 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  background:#0f172a;
+  color:white;
+}
+
+/* Navbar */
+
+.navbar{
+  background:#111827;
+  padding:20px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:28px;
+  font-weight:bold;
+  color:#22c55e;
+}
+
+/* Hero */
+
+.hero{
+  padding:90px 20px;
+
+  background:
+  linear-gradient(rgba(0,0,0,0.6),
+  rgba(0,0,0,0.6)),
+
+  url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600')
+  center/cover;
+
+  text-align:center;
+}
+
+.hero h1{
+  font-size:50px;
+  margin-bottom:20px;
+}
+
+.hero p{
+  font-size:20px;
+  color:#d1d5db;
+}
+
+/* Stats */
+
+.stats{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(220px,1fr));
+
+  gap:20px;
+  padding:40px;
+}
+
+.card{
+  background:#1e293b;
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+}
+
+.card h2{
+  font-size:40px;
+  color:#22c55e;
+}
+
+/* Main Grid */
+
+.main-grid{
+  display:grid;
+  grid-template-columns:1fr 1.5fr;
+  gap:30px;
+  padding:40px;
+}
+
+/* Form */
+
+.form-section{
+  background:#1e293b;
+  padding:30px;
+  border-radius:20px;
+}
+
+form{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+input,
+select,
+textarea{
+  padding:15px;
+  border:none;
+  border-radius:10px;
+  background:#0f172a;
+  color:white;
+}
+
+button{
+  padding:15px;
+  border:none;
+  border-radius:10px;
+  background:#22c55e;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+#preview{
+  width:100%;
+  max-height:250px;
+  object-fit:cover;
+  border-radius:15px;
+  display:none;
+}
+
+/* Map */
+
+.map-section{
+  background:#1e293b;
+  padding:20px;
+  border-radius:20px;
+}
+
+#map{
+  width:100%;
+  height:500px;
+  border-radius:20px;
+}
+
+/* Reports */
+
+.reports-section{
+  padding:40px;
+}
+
+#reportsContainer{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(320px,1fr));
+
+  gap:20px;
+}
+
+.report-card{
+  background:#1e293b;
+  padding:20px;
+  border-radius:20px;
+}
+
+.report-card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:15px;
+  margin-bottom:15px;
+}
+
+.status{
+  display:inline-block;
+  padding:6px 12px;
+  border-radius:20px;
+  margin:10px 0;
+}
+
+.pending{
+  background:#facc15;
+  color:black;
+}
+
+.cleaned{
+  background:#22c55e;
+  color:black;
+}
+
+.actions{
+  display:flex;
+  gap:10px;
+}
+
+.clean-btn{
+  background:#22c55e;
+}
+
+.delete-btn{
+  background:#ef4444;
+  color:white;
+}
+
+/* Footer */
+
+footer{
+  text-align:center;
+  padding:30px;
+  background:#111827;
+  margin-top:30px;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+  .main-grid{
+    grid-template-columns:1fr;
+  }
+
+}
